@@ -32,6 +32,18 @@ $cols: #C2E59C;
 
 }
 
+.activated{
+
+  display: block;
+
+}
+
+.deactived{
+
+  display: none;
+
+}
+
 /* Reset CSS pour materialize */
 
 html, body{
@@ -305,8 +317,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   }
   #svg #bar {
     stroke: $colp;
-    transform: rotate(90deg);
-    transform-origin: 50% 50%;
     z-index: 1;
   }
   #cont {
@@ -424,7 +434,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
       width: 100%;
       height: auto;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
 
       h5{
 
@@ -446,6 +456,70 @@ textarea.materialize-textarea:focus:not([readonly]) {
       }
 
     }
+
+  }
+
+}
+
+/*Nav bar*/
+
+#fixed_dash_nav{
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 10px #959595;
+  background-color: $colw;
+
+  ul{
+
+    margin: 0 auto;
+
+    li{
+
+      a{
+
+        color: $coln;
+
+      }
+
+      .active_nav{
+
+        color: $colp;
+
+      }
+
+    }
+
+  }
+
+}
+
+/*inc et spend form*/
+
+.add_form{
+
+  h3{
+
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $cols;
+  }
+
+  .button_send{
+
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .photo_container{
+
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
 
   }
 

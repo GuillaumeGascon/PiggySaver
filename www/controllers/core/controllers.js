@@ -15,13 +15,12 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 	/*On attend que l'appareil ai tout chargé*/
 	document.addEventListener('deviceReady', function() {
 
-		/*On cache la status bar pendant l'attente*/
-    StatusBar.hide();
-
 		/*Une fois fais on passe l'appareil en ready*/
     $scope.$apply(function() {
 
       $scope.deviceReady = true;
+			/*On cache la status bar pendant l'attente*/
+	    StatusBar.hide();
 
     });
 
