@@ -1,0 +1,299 @@
+/* Variable SCSS */
+/*classe general*/
+.colp {
+  display: block;
+  background: #24d292;
+  color: #fff; }
+
+.cols {
+  display: block;
+  background: #C2E59C;
+  color: #fff; }
+
+.coln {
+  display: block;
+  background: #000;
+  color: #fff; }
+
+.activated {
+  display: block; }
+
+.deactived {
+  display: none; }
+
+/* Reset CSS pour materialize */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #24d292; }
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #24d292;
+  -webkit-box-shadow: 0 1px 0 0 #24d292;
+  box-shadow: 0 1px 0 0 #24d292; }
+
+/* Top bar */
+#top_bar {
+  background: linear-gradient(to right, #24d292, #C2E59C);
+  box-shadow: 1px 1px 5px #959191;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px; }
+  #top_bar a {
+    width: 10%; }
+    #top_bar a img {
+      width: 30%; }
+
+/* Login */
+#login {
+  width: 100vw;
+  height: 100vh;
+  background: #fff; }
+  #login #form_login {
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px #959595;
+    overflow-x: hidden; }
+    #login #form_login img {
+      width: 25%; }
+    #login #form_login h4 {
+      width: auto;
+      font-size: 1.4em;
+      color: #24d292; }
+    #login #form_login .btn {
+      background: #24d292; }
+  #login #form_register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px #959595;
+    overflow-x: hidden; }
+    #login #form_register img {
+      width: 25%; }
+    #login #form_register h4 {
+      width: auto;
+      font-size: 1.4em;
+      color: #24d292; }
+    #login #form_register .btn {
+      background: #24d292; }
+  #login .row {
+    margin-bottom: 0; }
+  #login #change_login {
+    color: #24d292;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px; }
+  #login #change_form {
+    color: #24d292;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px; }
+
+/*Ajout d'objectif*/
+#add_objective {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #add_objective .s12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap; }
+  #add_objective p {
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%; }
+
+#objective_form {
+  width: 100vw;
+  height: 100vh; }
+  #objective_form #add {
+    padding: 0 0 10px 0;
+    overflow-x: hidden; }
+    #objective_form #add .btn {
+      background: #24d292; }
+    #objective_form #add .validate {
+      margin-bottom: 10px; }
+    #objective_form #add .select-dropdown {
+      margin-bottom: 10px; }
+  #objective_form .row {
+    margin-bottom: 0; }
+  #objective_form select {
+    width: 100%;
+    height: 100%; }
+
+/*Dashbord*/
+#dashboard_container {
+  padding-top: 5px;
+  /*Circle percentage SVG*/
+  /*Title container*/
+  /*Desc container*/ }
+  #dashboard_container .row {
+    margin-bottom: 5px; }
+  #dashboard_container #svg circle {
+    margin-top: none;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: transparent;
+    stroke-width: 1em; }
+  #dashboard_container #svg #bar {
+    stroke: #24d292;
+    z-index: 1; }
+  #dashboard_container #cont {
+    display: block;
+    z-index: 9;
+    height: 220px;
+    width: 220px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 15px #959595;
+    border-radius: 100%;
+    position: relative; }
+  #dashboard_container #cont:after {
+    position: absolute;
+    display: block;
+    height: 185px;
+    width: 185px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 15px #959595;
+    content: attr(data-pct) "%";
+    margin-top: -93px;
+    margin-left: -93px;
+    border-radius: 100%;
+    line-height: 305px;
+    font-size: 1.3em;
+    color: #C2E59C;
+    font-weight: 800;
+    text-shadow: inset 0 0 15px #000000; }
+  #dashboard_container #time_before {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #24d292; }
+    #dashboard_container #time_before p {
+      font-size: 0.6em;
+      font-weight: 500;
+      color: #000;
+      line-height: 0.1em; }
+  #dashboard_container #title_container {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto; }
+    #dashboard_container #title_container h2 {
+      margin: 5px auto;
+      font-weight: 600;
+      font-size: 1.5em; }
+    #dashboard_container #title_container p {
+      margin: 0 auto;
+      font-size: 1.1em;
+      font-weight: 600;
+      font-style: italic; }
+  #dashboard_container #desc_container {
+    display: block;
+    width: auto;
+    height: auto; }
+    #dashboard_container #desc_container h4 {
+      margin: 5px auto;
+      text-align: left;
+      font-size: 0.8em;
+      text-decoration: underline; }
+    #dashboard_container #desc_container p {
+      margin: 5px 0;
+      text-align: left;
+      font-size: 0.8em; }
+  #dashboard_container #money_container {
+    display: block;
+    width: auto;
+    height: auto; }
+    #dashboard_container #money_container .money {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+      #dashboard_container #money_container .money h5 {
+        font-size: 0.8em;
+        margin-bottom: 0;
+        text-align: left; }
+      #dashboard_container #money_container .money p {
+        font-size: 1.4em;
+        font-weight: 800;
+        font-style: italic;
+        margin-bottom: 5px;
+        margin-top: 0;
+        text-align: right; }
+
+/*Nav bar*/
+#fixed_dash_nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 10px #959595;
+  background-color: #fff; }
+  #fixed_dash_nav ul {
+    margin: 0 auto; }
+    #fixed_dash_nav ul li a {
+      color: #000; }
+    #fixed_dash_nav ul li .active_nav {
+      color: #24d292; }
+
+/*inc et spend form*/
+.add_form h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #C2E59C; }
+.add_form .button_send {
+  display: flex;
+  justify-content: center; }
+.add_form .photo_container {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center; }
+
+/*# sourceMappingURL=Style.css.map */

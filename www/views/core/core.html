@@ -1,0 +1,21 @@
+<div class="row" id="top_bar">
+
+  <div class="container">
+
+    <a href="#" class="brand-logo"><img src="img/logo_text.png" alt="logo" /></a>
+
+  </div>
+
+</div>
+
+<div ui-view></div>
+
+<nav id="fixed_dash_nav">
+  <div class="nav-wrapper">
+    <ul>
+      <li><a id="inc_nav" ng-click="locIncome()"><i class="material-icons">attach_money</i></a></li>
+      <li><a id="home_nav" ng-click="locHome()" class="active_nav"><i class="material-icons">home</i></a></li>
+      <li><a id="spend_nav" ng-click="locSpend()"><i class="material-icons">money_off</i></a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,452 @@
+/* Variable SCSS */
+
+$colp: #24d292;
+$colg: #414141;
+$colw: #fff;
+$coln: #000;
+$cols: #C2E59C;
+
+/*classe general*/
+
+.colp{
+
+  display: block;
+  background: $colp;
+  color: $colw;
+
+}
+
+.cols{
+
+  display: block;
+  background: $cols;
+  color: $colw;
+
+}
+
+.coln{
+
+  display: block;
+  background: $coln;
+  color: $colw;
+
+}
+
+/* Reset CSS pour materialize */
+
+html, body{
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: $colp;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $colp;
+  -webkit-box-shadow: 0 1px 0 0 $colp;
+          box-shadow: 0 1px 0 0 $colp;
+}
+
+/* Top bar */
+
+#top_bar{
+
+  background: linear-gradient(to right, $colp, $cols);
+  box-shadow: 1px 1px 5px #959191;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+
+  a{
+
+    width: 10%;
+
+    img{
+
+      width: 30%;
+
+    }
+
+  }
+
+}
+
+/* Login */
+
+#login{
+
+  width: 100vw;
+  height: 100vh;
+  background: $colw;
+
+  #form_login{
+
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    transform: translate(-50%, -50%);
+    background: $colw;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px #959595;
+    overflow-x: hidden;
+
+    img{
+
+      width: 25%;
+
+    }
+
+    h4{
+
+      width: auto;
+      font-size: 1.4em;
+      color: $colp;
+
+    }
+
+    .btn{
+
+      background: $colp;
+
+    }
+
+  }
+
+  #form_register{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $colw;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px #959595;
+    overflow-x: hidden;
+
+    img{
+
+      width: 25%;
+
+    }
+
+    h4{
+
+      width: auto;
+      font-size: 1.4em;
+      color: $colp;
+
+    }
+
+    .btn{
+
+      background: $colp;
+
+    }
+
+  }
+
+  .row{
+
+    margin-bottom: 0;
+
+  }
+
+  #change_login{
+
+    color: $colp;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+
+  }
+
+  #change_form{
+
+    color: $colp;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+
+  }
+
+}
+
+/*Ajout d'objectif*/
+
+#add_objective{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .s12{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+
+  }
+
+
+  p{
+
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+
+  }
+
+}
+
+#objective_form{
+
+  width: 100vw;
+  height: 100vh;
+
+  #add{
+
+    padding: 0 0 10px 0;
+    overflow-x: hidden;
+
+    .btn{
+
+      background: $colp;
+
+    }
+
+    .validate{
+
+      margin-bottom: 10px;
+
+    }
+
+    .select-dropdown{
+
+      margin-bottom: 10px;
+
+    }
+
+
+  }
+
+  .row{
+
+    margin-bottom: 0;
+
+  }
+
+  select{
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+}
+
+/*Dashbord*/
+
+#dashboard_container{
+
+  padding-top: 5px;
+
+  .row{
+
+    margin-bottom: 5px;
+
+  }
+
+  /*Circle percentage SVG*/
+
+  #svg circle {
+    margin-top: none;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: transparent;
+    stroke-width: 1em;
+  }
+  #svg #bar {
+    stroke: $colp;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+    z-index: 1;
+  }
+  #cont {
+    display: block;
+    z-index: 9;
+    height: 220px;
+    width: 220px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 15px #959595;
+    border-radius: 100%;
+    position: relative;
+  }
+  #cont:after {
+    position: absolute;
+    display: block;
+    height: 185px;
+    width: 185px;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 15px #959595;
+    content: attr(data-pct)"%";
+    margin-top: -93px;
+    margin-left: -93px;
+    border-radius: 100%;
+    line-height: 305px;
+    font-size: 1.3em;
+    color: $cols;
+    font-weight: 800;
+    text-shadow: inset 0 0 15px #000000;
+  }
+
+  #time_before{
+
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+    font-weight: 700;
+    color: $colp;
+
+    p{
+
+      font-size: 0.6em;
+      font-weight: 500;
+      color: $coln;
+      line-height: 0.1em;
+
+    }
+
+  }
+
+  /*Title container*/
+
+  #title_container{
+
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+
+    h2{
+
+      margin: 5px auto;
+      font-weight: 600;
+      font-size: 1.5em;
+
+    }
+
+    p{
+
+      margin: 0 auto;
+      font-size: 1.1em;
+      font-weight: 600;
+      font-style: italic;
+
+    }
+
+  }
+
+  /*Desc container*/
+
+  #desc_container{
+
+    display: block;
+    width: auto;
+    height: auto;
+
+    h4{
+
+      margin: 5px auto;
+      text-align: left;
+      font-size: 0.8em;
+      text-decoration: underline;
+
+    }
+
+    p{
+
+      margin: 5px 0;
+      text-align: left;
+      font-size: 0.8em;
+
+    }
+
+  }
+
+  #money_container{
+
+    display: block;
+    width: auto;
+    height: auto;
+
+    .money{
+
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+
+      h5{
+
+        font-size: 0.8em;
+        margin-bottom: 0;
+        text-align: left;
+
+      }
+
+      p{
+
+        font-size: 1.4em;
+        font-weight: 800;
+        font-style: italic;
+        margin-bottom: 5px;
+        margin-top: 0;
+        text-align: right;
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "ch.guillaumegn.piggysaver"
+        }
+    }
+}
