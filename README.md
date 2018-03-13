@@ -1,3 +1,3 @@
-# PiggySaver [![bitHound Score][bithound-img]][bithound-url]
+# PiggySaver [![bitHound Score]]
 
 Welcome on the PiggySaver Git
