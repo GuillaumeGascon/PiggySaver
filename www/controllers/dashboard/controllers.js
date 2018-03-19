@@ -13,6 +13,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 
     objectifStocker: function(){
 
+			/* Requête get pour récupérer les informations de l'objectif en fonction de l'userID */
 			return $http.get('https://guillaumegascon.eu/PiggySaver/models/objectiveFounder.php').then(function(data){
 
 					return data;
@@ -31,7 +32,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 
 		incomeStocker: function(){
 
-
+			/* Requête get pour récupérer la somme de income en fonction de l'userID */
 			return $http.get('https://guillaumegascon.eu/PiggySaver/models/incomeFounder.php').then(function(data){
 
 					return data;
@@ -50,6 +51,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 
 		spendStocker: function(){
 
+			/* Requête get pour récupérer la somme de spend en fonction de l'userID */
 			return $http.get('https://guillaumegascon.eu/PiggySaver/models/spendFounder.php').then(function(data){
 
 					return data;
@@ -116,33 +118,33 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				}
 
-				/*opération pour définir les fonds disponible en fonction des entrées/sorties de l'argent*/
+				/* opération pour définir les fonds disponibles en fonction des entrées/sorties de l'argent */
 
 				$scope.totalSub = Number($scope.initSub) + Number($scope.addIncome) - Number($scope.addSpend);
 
 				$('#objectif_sub').append($scope.totalSub);
 
-				/*Gestion des pourcentage du cercle et de l'affichage de ceux-ci*/
+				/* Gestion des pourcentage du cercle et de l'affichage de ceux-ci */
 
 				var val = parseFloat($scope.totalSub) * 100 / parseFloat($scope.addCost);
 			  var $circle = $('#svg #bar');
-				/*si la valeur donne NaN on passe le cercle à 100%*/
+				/* Si la valeur donne NaN on passe le cercle à 100% */
 			  if (isNaN(val)) {
 			   val = 100;
 			  }
 			  else{
 			    var r = $circle.attr('r');
-					/*on récupère le rayon du cercle*/
+					/* On récupère le rayon du cercle */
 			    var c = Math.PI*(r*2);
-					/*on défini le périmètre de celui-ci*/
+					/* On définit le périmètre de celui-ci */
 
 			    if (val < 0) { val = 0;}
-					/*si la valeur et inférieur à 0 alors on la set à 0*/
+					/* Si la valeur est inférieure à 0 alors on la set à 0 */
 			    if (val > 100) { val = 100;}
-					/* si la valeur et supérieur à 100 alors on la set a 100*/
+					/* Si la valeur est supérieure à 100 alors on la set a 100 */
 
 			    var pct = ((100-parseInt(val))/100)*parseInt(c);
-					/*pour avoir la valeur du strokedash on soustrait val à 100 que le divise encore par 100 puis on le multiplie par le périmètre*/
+					/* Pour avoir la valeur du strokedash : on soustrait val à 100, on le divise encore par 100 puis on le multiplie par le périmètre */
 
 			    $circle.css({ strokeDashoffset: pct});
 

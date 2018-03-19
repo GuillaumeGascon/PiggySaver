@@ -21,6 +21,7 @@ piggySaver.controller('incomeController', ['$rootScope', '$scope', '$location', 
 
 		}
 
+		/* Requête post pour envoyer l'income et récupérer les données */
 		$http.post('https://guillaumegascon.eu/PiggySaver/models/income.php', sendIncome).then(function(data){
 
 			$scope.newIncome = data.data;
@@ -32,7 +33,7 @@ piggySaver.controller('incomeController', ['$rootScope', '$scope', '$location', 
 
 			}
 			else {
-
+				// Changement de classe pour les icons navbar
 				$('#home_nav').addClass('active_nav');
 				$('#spend_nav').removeClass('active_nav');
 				$('#inc_nav').removeClass('active_nav');

@@ -17,10 +17,10 @@ piggySaver.controller('awsSpendController', ['$rootScope', '$scope', '$location'
 
 	}
 
+	/* Requête post pour transmettre l'id de la photo et récupérer les données d'aws */
 	$http.post('https://guillaumegascon.eu/PiggySaver/models/picSpend.php', sendID).then(function(data){
 
 		$scope.array = data.data;
-    console.log(data.data);
 
 		$(document).ready(function() {
 	    $('select').material_select();
@@ -43,6 +43,7 @@ piggySaver.controller('awsSpendController', ['$rootScope', '$scope', '$location'
 
 		}
 
+		/* Requête post pour transmettre les infos de la dépense et récupérer les données */
 		$http.post('https://guillaumegascon.eu/PiggySaver/models/spend.php', sendIncome).then(function(data){
 
 			$scope.newSpend = data.data;
@@ -55,6 +56,7 @@ piggySaver.controller('awsSpendController', ['$rootScope', '$scope', '$location'
 			}
 			else {
 
+				// Changement de classe pour les icons navbar
 				$('#home_nav').addClass('active_nav');
 				$('#spend_nav').removeClass('active_nav');
 				$('#inc_nav').removeClass('active_nav');
