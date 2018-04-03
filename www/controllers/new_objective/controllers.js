@@ -9,7 +9,7 @@ piggySaver.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
 piggySaver.controller('objectiveController', ['$rootScope', '$scope', '$location', '$http', function($rootScope, $scope, $location, $http) {
 
-	$('#fixed_dash_nav').addClass('deactived');
+	$('#fixed_dash_nav').hide();
 
   $scope.addObjective = function(){
 

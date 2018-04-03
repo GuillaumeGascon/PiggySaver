@@ -1,10 +1,10 @@
 piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$http', function($rootScope, $scope, $location, $http) {
 
-	/*On passe de base deviceready et user sur false*/
+	/* On passe de base deviceready et user sur false */
 	$scope.deviceReady = false;
 	$rootScope.user = false;
 
-	/*Si l'utilisateur n'est pas log on le redirige vers le login*/
+	/* Si l'utilisateur n'est pas log on le redirige vers le login */
 	if (!$rootScope.user) {
 		$location.path('/login');
 	}
@@ -12,29 +12,33 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		$location.path('/core');
 	}
 
-	/*On attend que l'appareil ai tout chargé*/
+	/* On attend que l'appareil ait tout chargé */
 	document.addEventListener('deviceReady', function() {
 
-		/*Une fois fais on passe l'appareil en ready*/
-    $scope.$apply(function() {
+		/* Une fois fait... */
+    	$scope.$apply(function() {
 
-      $scope.deviceReady = true;
-			/*On cache la status bar pendant l'attente*/
-	    StatusBar.hide();
+			/* On passe l'appareil en ready */
+      	$scope.deviceReady = true;
 
-    });
+			/* On cache la status bar pendant l'attente */
+	   	StatusBar.hide();
+
+    	});
 
   });
 
-	/*Changement de formulaire vers le login*/
+	/* Changement de formulaire vers le login */
 	$scope.changeForm = function(){
 
+		/* Formulaire pour enregistrement */
 		$('#form_register').animate({
 
 			left: "-200%"
 
 		}, 1000);
 
+		/* Formulaire pour connexion */
 		$('#form_login').animate({
 
 			left: "50%"
@@ -43,15 +47,17 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 
 	};
 
-	/*Changement de formulaire vers le register*/
+	/* Changement de formulaire vers le register */
 	$scope.changeLogin = function(){
 
+		/* Formulaire pour enregistrement */
 		$('#form_register').animate({
 
 			left: "50%"
 
 		}, 1000);
 
+		/* Formulaire pour connexion */
 		$('#form_login').animate({
 
 			left: "-200%"
@@ -60,6 +66,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 
 	};
 
+	/* Fonction pour enregistrement */
 	$scope.register = function(){
 
 		var userRegister = {
@@ -70,23 +77,36 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 			passBis: $('input[name="password_bis"]').val()
 
 		};
+
+		/* Requête post pour transmettre les infos de l'user inscrit et récupérer les données */
 		$http.post('https://guillaumegascon.eu/PiggySaver/models/register.php', userRegister).then(function(data){
 
 			$scope.objective = data.data;
 
+			/* Si l'objectif n'a pas encore d'ID ET renvoie success */
 			if ($scope.objective.Objective_ID == 0 && $scope.objective.type == "success") {
 
+				/* User connecté */
 				$rootScope.user = true;
+				/* Redirection vers page objectif */
 				$location.path('/core/objective');
 
-			}else if ($scope.objective.Objective_ID != 0 && $scope.objective.type == "success") {
+			}
+			/* Si l'objectif a un ID correct ET renvoie success */
+			else if ($scope.objective.Objective_ID != 0 && $scope.objective.type == "success") {
 
+				/* User connecté */
 				$rootScope.user = true;
+				/* Redirection vers dashboard */
 				$location.path('/core/dashboard');
 
-			}else if ($scope.objective.type == "error") {
+			}
+			/* Si renvoie erreur */
+			else if ($scope.objective.type == "error") {
 
+				/* Alerte avec message d'erreur */
 				alert($scope.objective.message);
+				/* User déconnecté */
 				$rootScope.user = false;
 
 			}
@@ -101,6 +121,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 
 	}
 
+	/* Fonction pour connexion */
 	$scope.logUser = function(){
 
 		var userRegister = {
@@ -109,23 +130,34 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 			logPass: $('input[name="logPassword"]').val()
 
 		};
+
+		/* Requête post pour transmettre username et password de l'user et récupérer les données */
 		$http.post('https://guillaumegascon.eu/PiggySaver/models/login.php', userRegister).then(function(data){
 
 			$scope.objective = data.data;
 
+			/* Si l'objectif n'a pas encore d'ID ET renvoie success */
 			if ($scope.objective.Objective_ID == 0 && $scope.objective.type == "success") {
-
+				/* User connecté */
 				$rootScope.user = true;
+				/* Redirection vers page objectif */
 				$location.path('/core/objective');
 
-			}else if ($scope.objective.Objective_ID != 0 && $scope.objective.type == "success") {
-
+			}
+			/* Si l'objectif a un ID correct ET renvoie success */
+			else if ($scope.objective.Objective_ID != 0 && $scope.objective.type == "success") {
+				/* User connecté */
 				$rootScope.user = true;
+				/* Redirection vers dashboard */
 				$location.path('/core/dashboard');
 
-			}else if ($scope.objective.type == "error") {
+			}
+			/* Si renvoie erreur */
+			else if ($scope.objective.type == "error") {
 
+				/* Alerte avec message d'erreur */
 				alert($scope.objective.message);
+				/* User déconnecté */
 				$rootScope.user = false;
 
 			}
@@ -139,6 +171,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 
 	}
 
+	// Changement de classe pour les icons navbar pour income
 	$scope.locIncome = function(){
 
 		$('#home_nav').removeClass('active_nav');
@@ -147,7 +180,8 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		$location.path('/core/income');
 
 	}
-
+	
+	// Changement de classe pour les icons navbar pour home
 	$scope.locHome = function(){
 
 		$('#home_nav').addClass('active_nav');
@@ -157,6 +191,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 
 	}
 
+	// Changement de classe pour les icons navbar pour spend
 	$scope.locSpend = function(){
 
 		$('#home_nav').removeClass('active_nav');
