@@ -19,6 +19,7 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 
 		}
 
+		/* Requête post pour envoyer le spend et récupérer les données */
 		$http.post('https://guillaumegascon.eu/PiggySaver/models/spend.php', sendSpend).then(function(data){
 
 			$scope.newSpend = data.data;
@@ -30,7 +31,7 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 
 			}
 			else {
-
+				// Changement de classe pour les icons navbar
 				$('#home_nav').addClass('active_nav');
 				$('#spend_nav').removeClass('active_nav');
 				$('#inc_nav').removeClass('active_nav');
@@ -48,6 +49,7 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 
 	}
 
+	/* Fonction pour envoyer la photo et la traiter */
 	$scope.picSpend = function(){
 
 		navigator.camera.getPicture(function(fileURL) {
@@ -60,8 +62,8 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 
 			var params = new Object();
 
-      options.params = params;
-      options.chunkedMode = false;
+      	options.params = params;
+      	options.chunkedMode = false;
 
 			$scope.uploadingPicture = true;
 
