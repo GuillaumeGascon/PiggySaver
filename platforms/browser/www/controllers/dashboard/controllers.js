@@ -75,7 +75,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 
 piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location', '$http', '$objectifStocker', function($rootScope, $scope, $location, $http, $objectifStocker) {
 
-	$('#fixed_dash_nav').removeClass('deactived').addClass('activated');
+	$('#fixed_dash_nav').addClass('activated');
 
 	$objectifStocker.objectifStocker().then(function(data) {
 
@@ -153,7 +153,12 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				var month = ((parseInt($scope.addCost) + parseFloat($scope.addAmount)) - parseFloat($scope.totalSub)) / (parseFloat($scope.addIncome) - parseFloat($scope.addMargin));
 
-				$('#time_before').prepend(parseInt(month) + '<br>Month');
+				if(parseInt(month) <= 1){
+					$('#time_before').prepend(parseInt(month) + '<br>Month');
+				} else {
+						$('#time_before').prepend(parseInt(month) + '<br>Months');
+				}
+
 
 			});
 
