@@ -80,7 +80,7 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 	$objectifStocker.objectifStocker().then(function(data) {
 
 		$('#objectif_title').append(data.data.Title);
-		$('#objectif_price').append(data.data.Cost+',00 '+ data.data.Currency);
+		$('#objectif_price').append(data.data.Cost+' '+ data.data.Currency);
 		$('#objectif_desc').append(data.data.Desc_OBJ);
 
 		$scope.initSub = data.data.Substance;
@@ -104,7 +104,7 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				}else{
 
-					$('#objectif_spend').append(parseFloat($scope.addSpend));
+					$('#objectif_spend').append($scope.addSpend);
 
 				}
 
@@ -115,7 +115,7 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				}else{
 
-					$('#objectif_inc').append(parseFloat($scope.addIncome));
+					$('#objectif_inc').append($scope.addIncome);
 
 				}
 
