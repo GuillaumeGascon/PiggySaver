@@ -127,7 +127,7 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				/* Gestion des pourcentage du cercle et de l'affichage de ceux-ci */
 
-				var val = parseFloat($scope.totalSub) * 100 / parseFloat($scope.addCost);
+				var val = parseInt($scope.totalSub) * 100 / parseInt($scope.addCost);
 			  var $circle = $('#svg #bar');
 				/* Si la valeur donne NaN on passe le cercle à 100% */
 			  if (isNaN(val)) {
