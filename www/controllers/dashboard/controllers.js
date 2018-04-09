@@ -95,8 +95,9 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 			$objectifStocker.spendStocker().then(function(data) {
 
 				$scope.addSpend = data.data;
+				console.log($scope.addSpend);
 
-				if($scope.addSpend == 'null'){
+				if($scope.addSpend == 'null' || $scope.addSpend == ''){
 
 					$scope.addSpend = 0;
 					$('#objectif_spend').append($scope.addSpend);
@@ -107,7 +108,7 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 
 				}
 
-				if($scope.addIncome == 'null'){
+				if($scope.addIncome == 'null' || $scope.addIncome == ''){
 
 					$scope.addIncome = 0;
 					$('#objectif_inc').append($scope.addIncome);
