@@ -304,7 +304,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
   #svg circle {
     margin-top: none;
-    stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
     stroke: transparent;
     stroke-width: 1em;
@@ -312,6 +311,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
   #svg #bar {
     stroke: $colp;
     z-index: 1;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-90deg);
   }
   #cont {
     display: block;

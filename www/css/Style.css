@@ -18,9 +18,6 @@
 .activated {
   display: block; }
 
-.deactived {
-  display: none; }
-
 /* Reset CSS pour materialize */
 html, body {
   margin: 0;
@@ -174,13 +171,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
     margin-bottom: 5px; }
   #dashboard_container #svg circle {
     margin-top: none;
-    stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
     stroke: transparent;
     stroke-width: 1em; }
   #dashboard_container #svg #bar {
     stroke: #24d292;
-    z-index: 1; }
+    z-index: 1;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-90deg); }
   #dashboard_container #cont {
     display: block;
     z-index: 9;
