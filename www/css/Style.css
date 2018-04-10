@@ -23,8 +23,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:not(.browser-default):focus:not([readonly]) + label,
@@ -64,7 +63,11 @@ textarea.materialize-textarea:focus:not([readonly]) {
   box-shadow: 1px 1px 5px #959191;
   padding-top: 10px;
   padding-bottom: 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99; }
   #top_bar a {
     width: 10%; }
     #top_bar a img {
@@ -74,7 +77,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 #login {
   width: 100vw;
   height: 100vh;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
   #login #form_login {
     position: absolute;
     top: 50%;
@@ -163,7 +167,9 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 /*Dashbord*/
 #dashboard_container {
-  padding-top: 5px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   /*Circle percentage SVG*/
   /*Title container*/
   /*Desc container*/ }
@@ -233,7 +239,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
       font-weight: 600;
       font-style: italic; }
   #dashboard_container #desc_container {
-    display: block;
+    display: none;
     width: auto;
     height: auto; }
     #dashboard_container #desc_container h4 {
@@ -264,6 +270,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
         margin-bottom: 5px;
         margin-top: 0;
         text-align: right; }
+      #dashboard_container #money_container .money:last-child {
+        margin-bottom: 60px; }
 
 /*Nav bar*/
 #fixed_dash_nav {
@@ -282,16 +290,18 @@ textarea.materialize-textarea:focus:not([readonly]) {
       color: #24d292; }
 
 /*inc et spend form*/
-.add_form h3 {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #C2E59C; }
-.add_form .button_send {
-  display: flex;
-  justify-content: center; }
-.add_form .photo_container {
-  display: flex;
-  margin-top: 10%;
-  justify-content: center; }
+.add_form {
+  padding-top: 60px; }
+  .add_form h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #C2E59C; }
+  .add_form .button_send {
+    display: flex;
+    justify-content: center; }
+  .add_form .photo_container {
+    display: flex;
+    margin-top: 10%;
+    justify-content: center; }
 
 /*# sourceMappingURL=Style.css.map */
