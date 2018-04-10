@@ -214,7 +214,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     font-weight: 700;
     color: #24d292; }
     #dashboard_container #time_before p {
-      font-size: 0.65em;
+      font-size: 0.6em;
       font-weight: 500;
       color: #000;
       line-height: 0.1em; }
