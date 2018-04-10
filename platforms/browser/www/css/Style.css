@@ -214,7 +214,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     font-weight: 700;
     color: #24d292; }
     #dashboard_container #time_before p {
-      font-size: 0.6em;
+      font-size: 0.65em;
       font-weight: 500;
       color: #000;
       line-height: 0.1em; }
@@ -239,12 +239,12 @@ textarea.materialize-textarea:focus:not([readonly]) {
     #dashboard_container #desc_container h4 {
       margin: 5px auto;
       text-align: left;
-      font-size: 0.8em;
+      font-size: 1em;
       text-decoration: underline; }
     #dashboard_container #desc_container p {
       margin: 5px 0;
       text-align: left;
-      font-size: 0.8em; }
+      font-size: 1em; }
   #dashboard_container #money_container {
     display: block;
     width: auto;
@@ -254,7 +254,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
       height: auto;
       margin-bottom: 10px; }
       #dashboard_container #money_container .money h5 {
-        font-size: 0.8em;
+        font-size: 1.2em;
         margin-bottom: 0;
         text-align: left; }
       #dashboard_container #money_container .money p {
