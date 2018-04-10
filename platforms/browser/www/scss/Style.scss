@@ -38,6 +38,12 @@ $cols: #C2E59C;
 
 }
 
+.modal-button{
+
+  color: $colg;
+
+}
+
 /* Reset CSS pour materialize */
 
 html, body{
@@ -403,7 +409,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
   #desc_container{
 
-    display: none;
     width: auto;
     height: auto;
 
@@ -411,16 +416,45 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
       margin: 5px auto;
       text-align: left;
-      font-size: 1em;
-      text-decoration: underline;
+      font-size: 1.7em;
+      font-weight: 100;
+      color: $colp;
 
     }
 
-    p{
+    .modal-elements{
 
-      margin: 5px 0;
-      text-align: left;
-      font-size: 1em;
+      padding: 10px;
+      border: 1px solid #CFD8DC;
+
+      i{
+
+        height: 100%;
+        width: 100%;
+        font-size: 1em;
+        color: $colp;
+        text-align: center;
+        margin: 5px 0 0 0;
+
+      }
+
+      h5{
+
+        margin: 5px 0;
+        text-align: left;
+        font-size: 1.1em;
+        color: $cols;
+
+      }
+
+      p{
+
+        margin: 5px 0;
+        text-align: left;
+        font-size: 1.1em;
+        color: $coln;
+
+      }
 
     }
 
@@ -509,7 +543,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .add_form{
 
-   padding-top: 60px; 
+   padding-top: 60px;
 
   h3{
 

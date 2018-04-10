@@ -18,6 +18,9 @@
 .activated {
   display: block; }
 
+.modal-button {
+  color: #414141; }
+
 /* Reset CSS pour materialize */
 html, body {
   margin: 0;
@@ -239,18 +242,34 @@ textarea.materialize-textarea:focus:not([readonly]) {
       font-weight: 600;
       font-style: italic; }
   #dashboard_container #desc_container {
-    display: none;
     width: auto;
     height: auto; }
     #dashboard_container #desc_container h4 {
       margin: 5px auto;
       text-align: left;
-      font-size: 1em;
-      text-decoration: underline; }
-    #dashboard_container #desc_container p {
-      margin: 5px 0;
-      text-align: left;
-      font-size: 1em; }
+      font-size: 1.7em;
+      font-weight: 100;
+      color: #24d292; }
+    #dashboard_container #desc_container .modal-elements {
+      padding: 10px;
+      border: 1px solid #CFD8DC; }
+      #dashboard_container #desc_container .modal-elements i {
+        height: 100%;
+        width: 100%;
+        font-size: 1em;
+        color: #24d292;
+        text-align: center;
+        margin: 5px 0 0 0; }
+      #dashboard_container #desc_container .modal-elements h5 {
+        margin: 5px 0;
+        text-align: left;
+        font-size: 1.1em;
+        color: #C2E59C; }
+      #dashboard_container #desc_container .modal-elements p {
+        margin: 5px 0;
+        text-align: left;
+        font-size: 1.1em;
+        color: #000; }
   #dashboard_container #money_container {
     display: block;
     width: auto;

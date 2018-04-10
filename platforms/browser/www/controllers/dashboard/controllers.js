@@ -82,6 +82,8 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 		$('#objectif_title').append(data.data.Title);
 		$('#objectif_price').append(data.data.Cost+' '+ data.data.Currency);
 		$('#objectif_desc').append(data.data.Desc_OBJ);
+		$('#objectif_margin').append(data.data.Margin+' '+ data.data.Currency);
+		$('#objectif_amount').append(data.data.Amount+' '+ data.data.Currency);
 
 		$scope.initSub = data.data.Substance;
 		$scope.addCost = data.data.Cost;
