@@ -18,11 +18,11 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		/* Une fois fait... */
     	$scope.$apply(function() {
 
-			/* On passe l'appareil en ready */
+				/* On passe l'appareil en ready */
       	$scope.deviceReady = true;
 
-			/* On cache la status bar pendant l'attente */
-	   	StatusBar.hide();
+				/* On cache la status bar pendant l'attente */
+				StatusBar.hide();
 
     	});
 
@@ -180,7 +180,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		$location.path('/core/income');
 
 	}
-	
+
 	// Changement de classe pour les icons navbar pour home
 	$scope.locHome = function(){
 

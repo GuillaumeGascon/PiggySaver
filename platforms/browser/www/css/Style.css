@@ -152,6 +152,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 #objective_form {
   width: 100vw;
+  padding-top: 50px;
   height: 100vh; }
   #objective_form #add {
     padding: 0 0 10px 0;
