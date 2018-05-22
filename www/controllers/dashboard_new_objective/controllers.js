@@ -40,6 +40,7 @@ piggySaver.controller('addObjectiveController', ['$rootScope', '$scope', '$locat
 			else {
 
 				$location.path('/core/dashboard');
+				$('#fixed_dash_nav').show();
 
 			}
 
