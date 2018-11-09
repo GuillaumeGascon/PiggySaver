@@ -97,7 +97,6 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 			$objectifStocker.spendStocker().then(function(data) {
 
 				$scope.addSpend = data.data;
-				console.log($scope.addSpend);
 
 				if($scope.addSpend == 'null' || $scope.addSpend == ''){
 
@@ -157,9 +156,9 @@ piggySaver.controller('dashboardController', ['$rootScope', '$scope', '$location
 				var month = ((parseInt($scope.addCost) + parseFloat($scope.addAmount)) - parseFloat($scope.totalSub)) / (parseFloat($scope.addIncome) - parseFloat($scope.addMargin));
 
 				if(parseInt(month) <= 1){
-					$('#time_before').prepend(parseInt(month) + '<br>Month');
+					$('#time_before').prepend(parseInt(Math.abs(month)) + '<br>Month');
 				} else {
-						$('#time_before').prepend(parseInt(month) + '<br>Months');
+						$('#time_before').prepend(parseInt(Math.abs(month)) + '<br>Months');
 				}
 
 
