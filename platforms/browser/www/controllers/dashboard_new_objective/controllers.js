@@ -21,13 +21,14 @@ piggySaver.controller('addObjectiveController', ['$rootScope', '$scope', '$locat
 			desc: $('input[name="desc"]').val(),
 			substance: $('input[name="substance"]').val(),
 			wages: $('input[name="wages"]').val(),
+			day: $('input[name="day"]').val(),
 			margin: $('input[name="margin"]').val(),
 			amount: $('input[name="amount"]').val(),
 			userID: $scope.sessionID
 
 		}
 		/* Requête post pour envoyer l'objectif et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/objective.php', sendObjective).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/objective.php', sendObjective).then(function(data){
 
 			$scope.newObjective = data.data;
 

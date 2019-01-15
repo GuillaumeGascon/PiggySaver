@@ -18,7 +18,7 @@ piggySaver.controller('awsSpendController', ['$rootScope', '$scope', '$location'
 	}
 
 	/* Requête post pour transmettre l'id de la photo et récupérer les données d'aws */
-	$http.post('https://guillaumegascon.eu/PiggySaver/models/picSpend.php', sendID).then(function(data){
+	$http.post('https://www.guillaumegascon.eu/PiggySaver/models/picSpend.php', sendID).then(function(data){
 
 		$scope.array = data.data;
 
@@ -44,7 +44,7 @@ piggySaver.controller('awsSpendController', ['$rootScope', '$scope', '$location'
 		}
 
 		/* Requête post pour transmettre les infos de la dépense et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/spend.php', sendIncome).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/spend.php', sendIncome).then(function(data){
 
 			$scope.newSpend = data.data;
 

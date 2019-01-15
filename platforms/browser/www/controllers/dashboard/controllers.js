@@ -14,7 +14,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
     objectifStocker: function(){
 
 			/* Requête get pour récupérer les informations de l'objectif en fonction de l'userID */
-			return $http.get('https://guillaumegascon.eu/PiggySaver/models/objectiveFounder.php').then(function(data){
+			return $http.get('https://www.guillaumegascon.eu/PiggySaver/models/objectiveFounder.php').then(function(data){
 
 					return data;
 
@@ -33,7 +33,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 		incomeStocker: function(){
 
 			/* Requête get pour récupérer la somme de income en fonction de l'userID */
-			return $http.get('https://guillaumegascon.eu/PiggySaver/models/incomeFounder.php').then(function(data){
+			return $http.get('https://www.guillaumegascon.eu/PiggySaver/models/incomeFounder.php').then(function(data){
 
 					return data;
 
@@ -52,7 +52,7 @@ piggySaver.factory('$objectifStocker', ['$rootScope', '$http', '$location', func
 		spendStocker: function(){
 
 			/* Requête get pour récupérer la somme de spend en fonction de l'userID */
-			return $http.get('https://guillaumegascon.eu/PiggySaver/models/spendFounder.php').then(function(data){
+			return $http.get('https://www.guillaumegascon.eu/PiggySaver/models/spendFounder.php').then(function(data){
 
 					return data;
 

@@ -20,7 +20,7 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 		}
 
 		/* Requête post pour envoyer le spend et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/spend.php', sendSpend).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/spend.php', sendSpend).then(function(data){
 
 			$scope.newSpend = data.data;
 
@@ -67,7 +67,7 @@ piggySaver.controller('spendController', ['$rootScope', '$scope', '$location', '
 
 			$scope.uploadingPicture = true;
 
-			fileTransfer.upload(fileURL, encodeURI('https://guillaumegascon.eu/PiggySaver/models/uploadsSpend.php'), function(result) {
+			fileTransfer.upload(fileURL, encodeURI('https://www.guillaumegascon.eu/PiggySaver/models/uploadsSpend.php'), function(result) {
 				$timeout(function() {
 
 					$location.path('/core/awsSpend/'+result.response);

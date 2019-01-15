@@ -22,7 +22,7 @@ piggySaver.controller('incomeController', ['$rootScope', '$scope', '$location', 
 		}
 
 		/* Requête post pour envoyer l'income et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/income.php', sendIncome).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/income.php', sendIncome).then(function(data){
 
 			$scope.newIncome = data.data;
 
@@ -68,7 +68,7 @@ piggySaver.controller('incomeController', ['$rootScope', '$scope', '$location', 
 
 			$scope.uploadingPicture = true;
 
-			fileTransfer.upload(fileURL, encodeURI('https://guillaumegascon.eu/PiggySaver/models/uploads.php'), function(result) {
+			fileTransfer.upload(fileURL, encodeURI('https://www.guillaumegascon.eu/PiggySaver/models/uploads.php'), function(result) {
 				$timeout(function() {
 
 					$location.path('/core/awsIncome/'+result.response);

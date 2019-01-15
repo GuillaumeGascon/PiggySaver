@@ -79,7 +79,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		};
 
 		/* Requête post pour transmettre les infos de l'user inscrit et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/register.php', userRegister).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/register.php', userRegister).then(function(data){
 
 			$scope.objective = data.data;
 
@@ -132,7 +132,7 @@ piggySaver.controller('coreController', ['$rootScope', '$scope', '$location', '$
 		};
 
 		/* Requête post pour transmettre username et password de l'user et récupérer les données */
-		$http.post('https://guillaumegascon.eu/PiggySaver/models/login.php', userRegister).then(function(data){
+		$http.post('https://www.guillaumegascon.eu/PiggySaver/models/login.php', userRegister).then(function(data){
 
 			$scope.objective = data.data;
 
